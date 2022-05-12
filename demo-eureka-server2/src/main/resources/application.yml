@@ -1,0 +1,17 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: eureka-server2
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://server1:7000/eureka/
+  instance:
+    hostname: server2
+    lease-renewal-interval-in-seconds: 20  #心跳时间
+    lease-expiration-duration-in-seconds: 90 #90s后下线剔除
+  server:
+    enable-self-preservation: false  #关闭自我保护

@@ -1,0 +1,14 @@
+server:
+  port: 7002
+spring.cloud.client.ip-address: 112.224.70.58 #ip地址属性
+spring:
+  application:
+    name: eureka-provider1
+eureka:
+  client:
+    register-with-eureka: true #注册
+    fetch-registry: false #取数据
+    service-url:
+      defaultZone: http://server1:7000/eureka/
+  instance:
+    hostname: localhost  #实例名称
